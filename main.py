@@ -104,8 +104,9 @@ def splash():
      \_____________________/
     """
     print(water_bottle_art)
+    print('Keep yourself hydrated!')
     print('...')
-    time.sleep(.5)
+    time.sleep(4)
     clear_screen()
 def clear_screen():
     if os.name == 'nt':  # For Windows
@@ -117,7 +118,7 @@ def main():
     tracker = WaterIntakeTracker()
     while True:
         clear_screen()
-        print(f"Main Screen: {tracker.get_intake_oz()/8:.2f} cups / 8 cups.\n")
+        print(f"Main Screen: {tracker.get_intake_oz():.2f} oz / 64 oz.\n")
         print(f"Water Hydration Tracker - Choose an option:")
         options_main = ["1. Add Water", "2. View Summary", "3. Undo Last Water Log", "4. Reset Water Logs", "0. Exit"]
         print(*options_main, sep="\n")
